@@ -15,6 +15,15 @@ class IssueAddNavItem extends React.Component {
     };
     this.showModal = this.showModal.bind(this);
     this.hideModal = this.hideModal.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  showModal() {
+    this.setState({ showing: true });
+  }
+
+  hideModal() {
+    this.setState({ showing: false });
   }
 
   async handleSubmit(e) {
@@ -39,13 +48,6 @@ class IssueAddNavItem extends React.Component {
     }
   }
 
-  showModal() {
-    this.setState({ showing: true });
-  }
-
-  hideModal() {
-    this.setState({ showing: false });
-  }
 
   render() {
     const { showing } = this.state;
